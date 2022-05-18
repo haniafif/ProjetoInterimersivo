@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="page fs" id="Fullpage">
+
+        <button id="but1" onclick="fs()">Immersive mode</button>
+        <a onclick="sumirfull() , mostrarpag1() ,mostrarpag2()" href="#">
+            <div id="inter">a</div>
+        </a>
+        <img id="img1" src="Assets/HOME.jpg" alt="">
+
+    </section>
+
+
+    <section class="pages" id="pag1">
+
+        <img id="img2" src="Assets/logo-banco-inter.png" alt="">
+
+
+    </section>
+
+
+    <section class="pages" id="pag2">
+        <img id="img3" src="Assets/Screenshot_20220518-185352_Inter.jpg" alt="">
+
+    </section>
+
+
+    <section class="pages" id="pag3">
+
+    </section>
+
+    <script>
+        function fs(){
+            document.documentElement.requestFullscreen()
+        }
+
+        function sumirfull(){
+            document.getElementById("Fullpage").classList.add("sumir")
+        }
+
+        function mostrarpag1(){
+            document.getElementById("pag1").classList.add("mostrarpag1")
+        }
+
+       setTimeout(function mostrarpag2(){
+            document.getElementById("pag1").classList.remove("mostrarpag1")
+            document.getElementById("pag2").classList.add("mostrarpag1")
+      }  , 6000) ;
+
+       
+
+        
+    </script>
+    
+</body>
+</html>

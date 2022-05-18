@@ -1,0 +1,132 @@
+* {
+    font-size: 62.5%;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.pages{
+    z-index: 99;
+    display: none;
+    transition-duration: 600ms;
+}
+
+body{
+    background-color: rgba(250, 235, 215, 0.445);
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(300, 33%, 65%);
+    height: 100%;
+    border-radius: 1.6rem;
+}
+
+#Fullpage{
+    height: 90vh;
+    width: min(77vw , 100%);
+    margin: 5vh auto;
+    transition-duration: 1s;
+    transform-origin: center;
+    border: 0.3rem solid rgba(0, 0, 0, 0.568);
+    z-index: 100;
+    
+}
+
+
+#Fullpage button{
+    border: none;
+    width: 50%;
+    height: 5%;
+    font-size: medium;
+    position: absolute;
+    top: 70%;
+    border-radius: 6rem;
+    background-color: rgba(0, 0, 0, 0.568);
+    color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition-delay: 1s;
+}
+
+#img1{
+    display: none;
+    transition-duration: 1s;
+    margin: 5vh auto;
+}
+#inter{
+    opacity: 0;
+}
+/* AFTER FULLSCREEN */
+
+:fullscreen #Fullpage.fs{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+:fullscreen #Fullpage button{
+    display:none
+}
+
+:fullscreen #inter{
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 35%;
+    height: 25%;
+    opacity: 0;
+}
+
+:fullscreen #img1{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    display: initial;
+}
+
+:fullscreen a{
+    cursor: pointer;
+}
+
+.sumir{
+    z-index: 1;
+    display: none;
+}
+
+/* pag1 (Dentro do Inter) Tela de carregamento */
+
+
+.mostrarpag1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+}
+#img2{
+    transition-duration: 700ms;
+    width: 45%;
+    height: 45%;
+}
+
+/* pag1 (Dentro do Inter) */
+
+#img3{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    display: initial;
+}
