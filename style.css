@@ -1,137 +1,150 @@
-* {
-    font-size: 62.5%;
-    font-size: 1.6rem;
+/* -------------------- GERAL ------------------ */
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-.pages{
-    z-index: 99;
-    display: none;
-    transition-duration: 600ms;
-}
-
-body{
-    background-color: rgba(250, 235, 215, 0.445);
-}
-
-.page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: hsl(300, 33%, 65%);
-    height: 100%;
-    border-radius: 1.6rem;
-}
-
-#Fullpage{
-    height: 90vh;
-    width: min(77vw , 100%);
-    margin: 5vh auto;
-    transition-duration: 1s;
-    transform-origin: center;
-    border: 0.3rem solid rgba(0, 0, 0, 0.568);
-    z-index: 100;
-    
-}
-
-
-#Fullpage button{
-    border: none;
-    width: 50%;
-    height: 5%;
-    font-size: medium;
-    position: absolute;
-    top: 70%;
-    border-radius: 6rem;
-    background-color: rgba(0, 0, 0, 0.568);
-    color: azure;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    cursor: pointer;
-    transition-delay: 1s;
 }
 
-#img1{
-    display: none;
-    transition-duration: 1s;
-    margin: 5vh auto;
-}
-#inter{
-    opacity: 0;
-}
-/* AFTER FULLSCREEN */
 
-:fullscreen #Fullpage.fs{
-    height: 100vh;
+/* -------------------- header ------------------ */
+header{
     width: 100vw;
-    margin: 0;
-    border: 0;
-    border-radius: 0;
 }
 
-:fullscreen #Fullpage button{
-    display:none
+h1{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    color: #FF7A00;
 }
 
-:fullscreen #inter{
-    position: absolute;
-    top: 5%;
-    left: 3%;
-    width: 35%;
-    height: 25%;
-    opacity: 0;
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
-:fullscreen #img1{
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    border: 0;
-    border-radius: 0;
-    display: initial;
+nav img{
+    margin: 2.1rem 1rem 0 .6rem;
 }
 
-:fullscreen a{
-    cursor: pointer;
+/* -------------------- dinheiro ------------------ */
+
+.dinheiro h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0 .8rem 1.5rem;
 }
 
-.sumir{
-    z-index: 1;
-    display: none;
+.dinheiro p{
+    color: #FF7A00;
+    font-weight: 700;
+    margin-left: 1.5rem;
 }
 
-/* pag1 (Dentro do Inter) Tela de carregamento */
-
-
-.mostrarpag1{
+/* -------------------- Cards ------------------ */
+.cards{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    height: 100vh;
-    width: 100vw;
-    border-radius: 0;
+    margin-top: .6rem;
+    width: 96vw;
+    gap: .4rem;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 27vw;
+    height: 16vh;
+    border-radius: .4rem;
+    margin-left: 1.2rem;
+
 }
 
-#pag1 h1{
-     color: orangered;
-     font-size: 6rem;
+.card img{
+    transform: scale(0.6);
+    margin-left: 1rem;
 }
 
-#img2{
-    transition-duration: 700ms;
-    width: 45%;
-    height: 45%;
+.card p{
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 600;
 }
 
-/* pag1 (Dentro do Inter) */
-
-#img3{
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    border: 0;
-    border-radius: 0;
+.card svg{
+    transform: scale(0.4);
+    margin-top: -1.2rem;
+    margin-left: -1rem;
 }
+
+/* -------------------- Ofertas------------------ */
+.seta{
+    transform: scale(0.34);
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+.ofertas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 1rem;
+    margin-top: -2.5rem;
+}
+.ofertas p{
+    font-weight: 600;
+}
+.ofertas img{
+    transform: scale(0.44);
+}
+.fgts{
+    display: grid;
+    grid-template-columns: 50%, 50%;
+}
+.fgts h3{
+    display: flex;
+    margin-left: 1.2rem;
+    margin-top: .5rem;
+    font-weight: 500;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.fgts p{
+    margin-left: 1.2rem;
+    margin-top: .5rem;
+    color: rgba(0, 0, 0, 0.534);
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.sobre button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #FF7A00;
+    border-radius: .3rem;
+    margin-left: 1rem;
+    padding-right: 3rem;
+    height: 1.8rem;
+    margin-top: -2rem;
+    color: white;
+ }
+
+ button p{
+    margin-left: 3rem;
+    font-weight: 600;
+ }
+
+.fgts img{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    height: 100%;
+    width: 100%;
+}
+ 
+
+
