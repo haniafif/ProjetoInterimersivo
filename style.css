@@ -1,16 +1,16 @@
 /* -------------------- GERAL ------------------ */
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-/* -------------------- header ------------------ */
-header{
-    width: 100vw;
+body{
+    margin: 0;
+    padding: 0;
+}
+.app{
+    display: none;
 }
 
 h1{
@@ -27,12 +27,13 @@ nav{
 
 nav img{
     margin: 2.1rem 1rem 0 .6rem;
+    transform: scale(0.7);
 }
 
 /* -------------------- dinheiro ------------------ */
 
 .dinheiro h2{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin: 1.5rem 0 .8rem 1.5rem;
 }
@@ -40,7 +41,9 @@ nav img{
 .dinheiro p{
     color: #FF7A00;
     font-weight: 700;
+    font-size: .9rem;
     margin-left: 1.5rem;
+    margin-bottom: .8rem;
 }
 
 /* -------------------- Cards ------------------ */
@@ -49,33 +52,40 @@ nav img{
     justify-content: center;
     align-items: center;
     margin-top: .6rem;
-    width: 96vw;
-    gap: .4rem;
+    width: 92vw;
+    gap: .6rem;
+    margin-left: 1rem;
+
 }
+
 .card{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 27vw;
+    width: 28vw;
     height: 16vh;
     border-radius: .4rem;
-    margin-left: 1.2rem;
-
-}
-
-.card img{
-    transform: scale(0.6);
-    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card p{
-    text-align: center;
     font-size: .8rem;
     font-weight: 600;
 }
 
+.card:active{
+    box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card img{
+    transform: scale(0.6);
+    margin-top: -1rem;
+}
+
+
 .card svg{
-    transform: scale(0.4);
-    margin-top: -1.2rem;
-    margin-left: -1rem;
+    transform: scale(0.5);
 }
 
 /* -------------------- Ofertas------------------ */
@@ -85,12 +95,15 @@ nav img{
     justify-content: center;
     margin-top: -1rem;
 }
-
+.seta:active{
+    transform: scale(0.5);
+    transition-duration: 30ms;
+}
 .ofertas{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-inline: 1rem;
+    margin-inline: 1.5rem;
     margin-top: -2.5rem;
 }
 .ofertas p{
@@ -98,22 +111,30 @@ nav img{
 }
 .ofertas img{
     transform: scale(0.44);
+    margin-right: -1rem;
+}
+.ofertas img:active{
+    transform: scale(0.66);
+    transition-duration: 30ms;
 }
 .fgts{
     display: grid;
     grid-template-columns: 50%, 50%;
+    background-color: aliceblue;
+    margin-inline: 1rem;
 }
 .fgts h3{
     display: flex;
-    margin-left: 1.2rem;
+    margin-left: .6rem;
     margin-top: .5rem;
     font-weight: 500;
     grid-column-start: 1;
     grid-column-end: 3;
+    font-size: 1.2rem;
 }
 
 .fgts p{
-    margin-left: 1.2rem;
+    margin-left: .6rem;
     margin-top: .5rem;
     color: rgba(0, 0, 0, 0.534);
     grid-column-start: 1;
@@ -123,28 +144,98 @@ nav img{
 .sobre button{
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     border: none;
-    background-color: #FF7A00;
+    background-image: linear-gradient(to right,#FF7A00, rgba(0, 0, 255, 0.486));
     border-radius: .3rem;
-    margin-left: 1rem;
+    margin-left: .5rem;
     padding-right: 3rem;
     height: 1.8rem;
-    margin-top: -2rem;
-    color: white;
+    margin-top: .6rem;
  }
 
- button p{
+.sobre button:active{
+    box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+
+ .sobre button p{
     margin-left: 3rem;
+    margin-top: .3rem;
     font-weight: 600;
+    color: antiquewhite;
  }
 
 .fgts img{
     grid-column-start: 3;
     grid-column-end: 3;
-    height: 100%;
-    width: 100%;
+    height: 8.3rem;
+    width: 9.3rem;
 }
- 
 
+/* -------------------- Iniciar "app" ------------------ */
+.clicar{
+    display: flex;
+    position: fixed;
+    top: 40%;
+}
+
+.clicar button{
+    border: none;
+    color: white;
+    height: 3rem;
+    background-color: #FF7A00;
+    border: 1px solid black;
+    border-radius: .6rem;
+    padding: .3rem;
+    margin-left: 3rem;
+    cursor: pointer;
+}
+
+
+
+/* -------------------- Loading ------------------ */
+
+.loading{
+    position: fixed;
+    display: none;
+    right: 50%;
+    transform: translateX(40%);
+    top: 33%;
+    font-size: 2rem;
+    transition-duration: 1s;
+}
+
+.seta2{
+    position: fixed;
+    display: none;
+    right: 50%;
+    transform: translateX(60%);
+    top: 88%;
+    
+}
+
+/* -------------------- fazer sumir ------------------ */
+.sumir{
+    display: none;
+}
+
+/* -------------------- fazer aparecer ------------------ */
+
+.aparecer{
+    display: initial;
+}
+
+
+/* -------------------- Responsive ------------------ */
+@media (min-width: 375px){
+
+    .fgts img{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        height: 8.3rem;
+        width: 11.3rem;
+    }
+    
+
+}
 
