@@ -93,6 +93,11 @@ nav img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn linear 700ms;
+   -webkit-animation: fadeIn linear 700ms;
+   -moz-animation: fadeIn linear 700ms;
+   -o-animation: fadeIn linear 700ms;
+   -ms-animation: fadeIn linear 700ms;
 }
 
 .card p{
@@ -106,12 +111,17 @@ nav img{
 
 .card img{
     transform: scale(0.6);
-    margin-top: -1rem;
+    margin-bottom: -.8rem;
 }
 
 
 .card svg{
-    transform: scale(0.5);
+    transform: scale(0.44);
+}
+
+#celmaior{
+    display: none;
+
 }
 
 /* -------------------- Ofertas------------------ */
@@ -147,10 +157,12 @@ nav img{
     display: grid;
     grid-template-columns: 50%, 50%;
     background-color: aliceblue;
-    margin-inline: 0.5rem;
-    position: fixed;
-    bottom: 5%;
-    width: 100%;
+    margin-inline: 1rem;
+    animation: fadeIn linear 700ms;
+   -webkit-animation: fadeIn linear 700ms;
+   -moz-animation: fadeIn linear 700ms;
+   -o-animation: fadeIn linear 700ms;
+   -ms-animation: fadeIn linear 700ms;
 }
 .fgts h3{
     display: flex;
@@ -197,8 +209,10 @@ nav img{
 .fgts img{
     grid-column-start: 3;
     grid-column-end: 3;
+    height: 8.3rem;
+    width: 9rem;
+    margin-left: -2rem;
 }
-
 /* -------------------- Iniciar "app" ------------------ */
 .clicar{
     display: flex;
@@ -264,10 +278,40 @@ nav img{
     .fgts img{
         grid-column-start: 3;
         grid-column-end: 3;
-        height: 8.3rem;
+        height: 8.5rem;
         width: 11.3rem;
+        margin-left: 0rem;
     }
     
+
+}
+
+@media (min-width: 425px){
+
+    .fgts img{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        height: 8.5rem;
+        width: 12.3rem;
+        margin-right: -2rem;
+    }
+    
+
+}
+
+@media (min-height:620px){
+
+    
+#celmaior{
+    display: flex;
+    animation: fadeIn linear 700ms;
+   -webkit-animation: fadeIn linear 700ms;
+   -moz-animation: fadeIn linear 700ms;
+   -o-animation: fadeIn linear 700ms;
+   -ms-animation: fadeIn linear 700ms;
+}
+
+
 
 }
 
