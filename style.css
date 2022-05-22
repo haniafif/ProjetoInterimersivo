@@ -8,6 +8,7 @@
 body{
     margin: 0;
     padding: 0;
+    animation: fadeIn linear 700ms;
 }
 .app{
     display: none;
@@ -29,6 +30,31 @@ nav img{
     margin: 2.1rem 1rem 0 .6rem;
     transform: scale(0.7);
 }
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 /* -------------------- dinheiro ------------------ */
 
@@ -121,7 +147,10 @@ nav img{
     display: grid;
     grid-template-columns: 50%, 50%;
     background-color: aliceblue;
-    margin-inline: 1rem;
+    margin-inline: 0.5rem;
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
 }
 .fgts h3{
     display: flex;
@@ -168,8 +197,6 @@ nav img{
 .fgts img{
     grid-column-start: 3;
     grid-column-end: 3;
-    height: 8.3rem;
-    width: 9.3rem;
 }
 
 /* -------------------- Iniciar "app" ------------------ */
@@ -203,7 +230,6 @@ nav img{
     transform: translateX(40%);
     top: 33%;
     font-size: 2rem;
-    transition-duration: 1s;
 }
 
 .seta2{
@@ -211,8 +237,8 @@ nav img{
     display: none;
     right: 50%;
     transform: translateX(60%);
-    top: 88%;
-    
+    top: 88%; 
+
 }
 
 /* -------------------- fazer sumir ------------------ */
@@ -224,6 +250,11 @@ nav img{
 
 .aparecer{
     display: initial;
+    animation: fadeIn linear 700ms;
+   -webkit-animation: fadeIn linear 700ms;
+   -moz-animation: fadeIn linear 700ms;
+   -o-animation: fadeIn linear 700ms;
+   -ms-animation: fadeIn linear 700ms;
 }
 
 
