@@ -176,7 +176,9 @@ nav img{
 .clicar{
     display: flex;
     position: fixed;
-    top: 40%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
 }
 
 .clicar button{
@@ -187,7 +189,6 @@ nav img{
     border: 1px solid black;
     border-radius: .6rem;
     padding: .3rem;
-    margin-left: 3rem;
     cursor: pointer;
 }
 
